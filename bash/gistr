@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+#### To greatly reduce your time navigating around different directories in a *nix environment (even WDSL) :
+
+## METHOD 1: Exploiting $PATH
+# 1. Create a directory to house your scripts
+# 2. Edit ~/.bashrc or ~/.profile (vim, vi, gedit, etc...) and add your scripting directory to the $PATH variable
+# 3. Create an extension-less plain-text file, and name it something short, memorable, and meaningful in relation to the target destination
+# 4. Place the proper application header at the top (either #!/bin/sh or #!/bin/bash)
+# 5. Insert a change-dir command to a path you visit regularly
+cd e:/dev/code/personal/git/gistr
+#
+# 6. Save and exit the file
+# Your new command to travel to this directory you added will be:
+# 	$ . <filename>
+#	
+# For example, to invoke this file's target, and change directories to my local 'gistr' folder:
+#	$ . gistr
+#
+# NOTE: That is "dot space filename." The command will execute without the dot, but in a new subshell
+#		that closes immediately after the execution completes.  The dot notation forces the shell to
+#		execute the command in the current shell.
+
+## METHOD 2: ALIASES
+# This happens to be my preferred method due to it's simplicity, but it involves more modifications to your
+#	shell startup scripts, like ~/.bashrc or ~/.profile
+# 1. Open ~/.bashrc for editing (my preference is VIM, but I know there are EMACS lovers as well as those who never touch a CLI for editing documents...)
