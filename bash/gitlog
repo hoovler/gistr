@@ -1,0 +1,3 @@
+#!/bin/sh
+SCRIPT_DIR=e:/dev/code/personal/scripts
+gource --background-image $SCRIPT_DIR/images/logoTall.png --seconds-per-day 8 --auto-skip-seconds 1 --bloom-intensity 1.5 --transparent --key --frameless -f
